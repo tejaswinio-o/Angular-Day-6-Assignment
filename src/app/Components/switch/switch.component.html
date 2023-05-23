@@ -1,0 +1,12 @@
+<h3>Assignment 1 & Assignment 2</h3>
+
+<section [ngSwitch]="userCase">
+    <div *ngFor="let p of getProduct()">
+        <p *ngSwitchCase="p.productName" >
+            "Product you selected is " <span style="text-transform: uppercase; font-weight: bold;">{{this.p.productName}}</span> <br>
+            {{this.p.productDesc}}
+        </p>
+    </div>
+    <!-- style="font-family: monospace; color: red;" -->
+    <p *ngSwitchDefault [ngStyle]="{'color': textColor, 'font-family': textFont, 'font-size': fontSize + 'px'}" >I guess you selected some other product which is not mentioned in the list.</p>
+</section>
